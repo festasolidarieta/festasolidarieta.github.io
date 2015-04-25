@@ -1,0 +1,54 @@
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+.footer {
+  position: absolute;
+  border-top: 2px solid black;
+  padding-top: 8px;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: #ffffff;
+  opacity: 0.6;
+  filter: alpha(opacity=60); /* For IE8 and earlier */
+  text-align: center;
+}
+
+.jumbotron {
+   margin-top: 20px;
+ }
+
+ .countdown {
+  text-align: center;
+  font-size: 1.5em;
+ }
+
+body {
+  background: url('../background.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+
+/* Custom page CSS
+-------------------------------------------------- */
+/* Not required for template or sticky footer method. */
+
+.container {
+  width: auto;
+  max-width: 850px;
+  padding: 0 15px;
+}
+.container .text-muted {
+  margin: 20px 0;
+}
