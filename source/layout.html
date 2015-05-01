@@ -1,0 +1,155 @@
+{% set navigation = [('index.html', 'Home'),
+                     ('programma.html', 'Cosa facciamo'),
+                     ('menu.html', 'La cucina propone...'), 
+                     ('dovesiamo.html', 'Come raggiungerci')] -%}
+<!DOCTYPE html>
+<html lang="it">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport"    content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Festa di Solidariet&agrave;">
+
+	<title>{%block title%}Festa di Solidariet&agrave;{%endblock%}</title>
+
+	<link rel="shortcut icon" href="assets/images/gt_favicon.png">
+	
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/css/font-awesome.min.css">
+
+	<!-- Custom styles for our template -->
+	<link rel="stylesheet" href="assets/css/bootstrap-theme.css" media="screen" >
+	<link rel="stylesheet" href="assets/css/main.css">
+
+	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 9]>
+	<script src="assets/js/html5shiv.js"></script>
+	<script src="assets/js/respond.min.js"></script>
+	<![endif]-->
+	{%block head%}{%endblock%}
+</head>
+
+<body class="home">
+
+	{%block prenav%}{%endblock%}
+
+	<!-- Fixed navbar -->
+	<div class="navbar navbar-inverse navbar-fixed-top headroom" >
+		<div class="container">
+			<div class="navbar-header">
+				<!-- Button for smallest screens -->
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+				<a class="navbar-brand " href="index.html">
+					<img src="assets/images/logo.png" alt="Festa di Solidariet&agrave;">
+					<span>festa di solidariet&agrave;</span>
+				</a>
+			</div>
+			<div class="navbar-collapse collapse">
+				<ul class="nav navbar-nav pull-right">
+					{%for element in navigation %}
+					<li {%if file == element[0] %} class="active" {%endif%}><a href="{{element[0]}}">{{element[1]}}</a></li>
+					{%endfor%}
+				</ul>
+			</div><!--/.nav-collapse -->
+		</div>
+	</div> 
+	<!-- /.navbar -->
+
+	{%block header%}
+	<header id="head" class="secondary"></header>
+	{%endblock%}
+
+	{%block mainbody%}
+	<div class="container bottom-space">
+		<div class="row">
+			<!-- Article main content -->
+			<article class="col-md-8 maincontent">
+				<header class="page-header">
+					<h1 class="page-title">{%block pagetitle%}{%endblock%}</h1>
+				</header>
+				
+				{%block content%}{%endblock%}
+			</article>
+			<!-- /Article -->
+			
+			<!-- Sidebar -->
+			<aside class="col-md-4 sidebar sidebar-right">
+
+				<div class="widget">
+					{%block sidebar%}{%endblock%}
+				</div>
+
+			</aside>
+			<!-- /Sidebar -->
+
+		</div>
+	</div>	<!-- /container -->
+
+	{%endblock%}
+
+	<footer id="footer">
+		<div class="footer1">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6 widget">
+						<h3 class="widget-title">Contatti</h3>
+						<ul style="list-style-type: none;padding: 0">
+							<li><i class="fa fa-phone"></i>&nbsp;&nbsp;+39 377 2594264</li>
+							<li><i class="fa fa-envelope"></i>&nbsp;&nbsp;<a href="mailto:info@festasolidarieta.it">info@festasolidarieta.it</a></li>
+						</ul>
+						<p><a class="btn btn-default" href="https://www.facebook.com/festasolidarieta"  target="_blank"><i class="fa fa-facebook-square"></i>&nbsp;&nbsp;Seguici!</a></p>
+					</div>
+
+					<div class="col-md-6 widget text-right">
+						<h3 class="widget-title">Evento realizzato con la collaborazione di</h3>
+							<p class="widget-body">
+							<ul style="list-style-type: none;padding: 0">
+								<li> <a href="http://www.parrocchieinsieme.org">Oratori Sant'Alessandro, San Rocco, Regina Pacis, SS. Giacomo e Donato</a></li>
+								<li><a href="http://www.sguardionlus.it">Associazione SGUARDI Onlus</a></li>
+								<li><a href="http://www.asosanrocco.it">ASO San Rocco</a></li>
+								<li><a href="http://www.astroskating.it">Astro Roller Skating</a></li>
+								<li>C.G. La Bussola</li>
+								<li>Caritas Comunit&agrave; pastorale San Vincenzo</li>
+								<li><a href="http://www.operazionematogrosso.it">Operazione Mato Grosso</a></li>
+							</p>	
+					</div>
+				</div> <!-- /row of widgets -->
+			</div>
+		</div>
+
+		<div class="footer2">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6 widget">
+						<div class="widget-body">
+								Copyright &copy; 2015, Festa di Solidariet&agrave;.
+								Layout based on the <a href="https://github.com/pozh/Progressus/" rel="designer">progressus</a> template. 
+						</div>
+					</div>
+					<div class="col-md-6 widget">
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</footer>
+
+	{%block endscript%}{%endblock%}
+	<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-62281540-1', 'auto');
+    ga('send', 'pageview');
+  	</script>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+	<script src="assets/js/headroom.min.js"></script>
+	<script src="assets/js/jQuery.headroom.min.js"></script>
+	<script src="assets/js/template.js"></script>
+
+	<script src="//maps.googleapis.com/maps/api/js?key=&amp;sensor=false&amp;extension=.js"></script> 
+	<script src="assets/js/google-map.js"></script>
+</body>
+</html>
