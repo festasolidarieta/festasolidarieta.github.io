@@ -7,18 +7,25 @@ body {
 
 /* Header */
 #head {
-	background:#181015 url( ../images/bg_header.jpg) no-repeat;
-	background-size: cover;
-	min-height:700px;
+	min-height: 700px;
+	padding-top: 175px;
 	text-align: center;
-	padding-top:180px;
 	color:white;
 	font-family:"Open sans", Helvetica, Arial;
 	font-weight:300;
-	font-size: 18px;
+	font-size: 1.2em;
 }
 
-#head.secondary { 
+#head-carousel {
+	position: absolute;
+	min-height:700px;
+	width: 100%;
+}
+
+#head.secondary {
+	background:#181015 url( ../images/carousel_3.jpg) no-repeat;
+    background-size: cover;
+    -moz-background-size: cover;
 	height:100px;
 	min-height: 100px;
 	padding-top:0px;
@@ -60,32 +67,37 @@ body {
 	box-shadow:inset 0px 0px 0px 3px rgba(0,0,0,.5);
 	background: transparent;
 }
-	#head .btn-default:hover,
-	#head .btn-default:focus {
-		color:rgba(0,0,0,.8);
-		-webkit-box-shadow:inset 0px 0px 0px 3px
-		rgba(0,0,0,.8);
-		-moz-box-shadow:inset 0px 0px 0px 3px
-		rgba(0,0,0,.8);
-		box-shadow:inset 0px 0px 0px 3px 
-		rgba(0,0,0,.8);
-		background: transparent;
-	}
-	#head .btn-default:active, 
-	#head .btn-default.active { 
-		color:#000;
-		-webkit-box-shadow:inset 0px 0px 0px 3px #000;
-		-moz-box-shadow:inset 0px 0px 0px 3px #000;
-		box-shadow:inset 0px 0px 0px 3px #000;
-		background: transparent;
-	}
+
+#head .btn-default:hover,
+#head .btn-default:focus {
+	color:rgba(0,0,0,.8);
+	-webkit-box-shadow:inset 0px 0px 0px 3px
+	rgba(0,0,0,.8);
+	-moz-box-shadow:inset 0px 0px 0px 3px
+	rgba(0,0,0,.8);
+	box-shadow:inset 0px 0px 0px 3px 
+	rgba(0,0,0,.8);
+	background: transparent;
+}
+
+#head .btn-default:active, 
+#head .btn-default.active { 
+	color:#000;
+	-webkit-box-shadow:inset 0px 0px 0px 3px #000;
+	-moz-box-shadow:inset 0px 0px 0px 3px #000;
+	box-shadow:inset 0px 0px 0px 3px #000;
+	background: transparent;
+}
 
 .navbar-brand {
 	font-family: "Paprika";
 }
 
 @media (max-width: 767px) {
-	#head { min-height:750px; padding-top:130px; }
+	#head {
+		min-height:750px;
+		padding-top:95px;
+	}
 	#head .lead { font-size: 34px; }
 	.fb-page {
 		margin-top: 1em;
@@ -96,6 +108,47 @@ body {
 	#footer .text-right {
 		text-align: center !important;	
 	}
+	#head-carousel {
+		display: none;
+	}
+
+	#head {
+		background: url(../images/carousel_1.jpg) no-repeat;
+	    background-size: cover;
+	    -moz-background-size: cover;
+	}
+}
+
+@media (min-width: 768px) {
+
+	.carousel .item {
+		background: #181015;
+		z-index: -99;
+		height: 700px;
+		width: 100%;
+	}
+
+	.carousel .one {
+	    background: url(../images/carousel_1.jpg) no-repeat;
+	    background-size: cover;
+	    -moz-background-size: cover;
+	}
+	.carousel .two {
+	    background: url(../images/carousel_2.jpg) no-repeat;
+	    background-size: cover;
+	    -moz-background-size: cover;
+	}
+	.carousel .three {
+	    background: url(../images/carousel_3.jpg) no-repeat;
+	    background-size: cover;
+	    -moz-background-size: cover;
+	}
+	.carousel .four {
+	    background: url(../images/carousel_4.jpg) no-repeat;
+	    background-size: cover;
+	    -moz-background-size: cover;
+	}
+
 }
 
 .title-font {
@@ -106,14 +159,12 @@ body {
 .slideUp { top:-100px; }
 .headroom { -webkit-transition: all 0.4s ease-out; -moz-transition: all 0.4s ease-out; -o-transition: all 0.4s ease-out; transition: all 0.4s ease-out; }
 
-
 /* Highlights (in jumbotron in most cases) */
 .highlight { margin-top:40px; }
 	.h-caption { text-align: center; } 
 	.h-caption i { display:block; font-size: 54px; color:#382526; margin-bottom:36px; }
 	.h-caption h4 { color:#382526; font-size: 16px; font-weight: bold; margin-bottom:20px; }
-	.h-body { }
-
+	.h-body {}
 
 /* Typography */
 h1 {font-family: "Paprika", Helvetica, Arial, sans-serif;}

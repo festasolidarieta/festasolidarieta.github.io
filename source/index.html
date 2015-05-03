@@ -1,6 +1,6 @@
 {% extends "layout.html" %}
 
-{% set file = 'index.html' %}
+{% set file = '/' %}
 {%block title%}Festa di Solidariet&agrave; &middot; Monza, 21 - 24 Maggio 2015{%endblock%}
 
 {%block prenav%}
@@ -15,50 +15,80 @@
 {%endblock%}
 
 {%block header%}
-    <script>
-      TargetDate = "05/21/2015 4:00 PM GMT";
-      CountActive = true;
-      CountStepper = -1;
-      LeadingZero = true;
-      DisplayFormat = "Iniziamo tra %D Giorni, %H Ore, %M Minuti e %S Secondi!";
-      FinishMessage = "";
-    </script>
-	<header id="head">
-		<div class="container">
-			<div class="row jumbotron">
-				<h1 class="lead">Festa di Solidariet&agrave;</h1>
-				<p class="tagline"><strong>Monza &middot; Oratorio Sant'Alessandro &middot; 21 - 24 Maggio 2015</strong></p>
-				<p>Giochi, sport, leccornie e riflessioni sulla solidariet&agrave;.<br>
+<div id="head-carousel" class="carousel slide" data-ride="carousel" data-interval="7000">
+	<!-- Indicators -->
+	<ol class="carousel-indicators">
+		<li data-target="#head-carousel" data-slide-to="0" class="active"></li>
+		<li data-target="#head-carousel" data-slide-to="1"></li>
+		<li data-target="#head-carousel" data-slide-to="2"></li>
+		<li data-target="#head-carousel" data-slide-to="3"></li>
+	</ol>
+
+	<div class="carousel-inner" role="listbox">
+		<div class="active item one"></div>
+		<div class="item two"></div>
+		<div class="item three"></div>
+		<div class="item four"></div>
+	</div>
+</div>
+
+<script>
+	TargetDate = "05/21/2015 4:00 PM GMT";
+	CountActive = true;
+	CountStepper = -1;
+	LeadingZero = true;
+	DisplayFormat = "Iniziamo tra %D Giorni, %H Ore, %M Minuti e %S Secondi!";
+	FinishMessage = "";
+</script>
+
+<header id="head">
+	<div class="container">
+		<div class="row jumbotron">
+			<h1 class="lead">Festa di Solidariet&agrave;</h1>
+			<p class="tagline">
+				<strong>Monza &middot; Oratorio Sant'Alessandro &middot; 21 - 24 Maggio 2015</strong>
+			</p>
+			<p>
+				Giochi, sport, leccornie e riflessioni sulla solidariet&agrave;.<br>
 				Raccolta fondi a favore delle popolazioni di Haiti, 
-				della missione di Tauca in Per&ugrave; e delle famiglie monzesi in difficolt&agrave;.</p>
-				<p><span id="countdown" class="timer"></span></p>
-				<script language="JavaScript" src="assets/js/countdown.js"></script>
-				<p><a class="btn btn-default" href="programma.html"><i class="fa fa-calendar"></i> Cosa facciamo</a></p>
-        	</div>
+				della missione di Tauca in Per&ugrave; e delle famiglie monzesi in difficolt&agrave;.
+			</p>
+			<p><span id="countdown" class="timer"></span></p>
+			<script language="JavaScript" src="assets/js/countdown.js"></script>
+			<p>
+				<a class="btn btn-default" href="programma.html"><i class="fa fa-calendar"></i>&nbsp;Cosa facciamo</a>
+			</p>
 		</div>
-	</header>
+	</div>
+</header>
 {%endblock%}
 
 {%block mainbody%}
 <!-- Intro -->
-<div class="container text-center top-space">
+<div class="container">
+	<div class="row">
 	<div class="col-md-8">
-		<div class="jumbotron">
+		<h2>Chi siamo</h2>
+		<p>
+La <strong>Festa di Solidariet&agrave;</strong> &egrave; una manifestazione, nata a Maggio 2005, che ogni anno coinvolge diverse associazioni, enti e agenzie della <strong>città di Monza</strong> in nome della solidariet&agrave;. <br>
+Si tratta di un evento che per un intero fine settimana coinvolge moltissimi volontari presso l’oratorio di Sant’Alessandro a Monza, proponendo ai partecipanti <strong>attivit&agrave; di vario genere</strong> (tornei sportivi, spettacoli, laboratori, punto ristoro, mostre, ...). <br>
+Lo scopo &egrave; duplice: <strong>raccogliere fondi</strong> da destinare ad opere di solidarietà e <strong>sensibilizzare</strong> chi vi partecipa su tematiche importanti.
+		</p>
+		<div class="jumbotron text-center top-space">
 			<h2 class="thin title-font">Uno Sguardo che si apre... verso l'orizzonte</h2>
 			<p>
-			Come di consueto, la Festa di Solidariet&agrave; offre uno spazio di riflessione sui temi legati alla societ&agrave; attuale. <br>
-			In questa undicesima edizione si ripercorrer&agrave; il cammino svolto in questi anni dal punto di vista delle tematiche trattate e degli aiuti concreti realizzati grazie ai numerosi partecipanti. <br>
-			Inoltre si avr&agrave; modo di approfondire il ruolo dell'alimentazione nel mondo e nella nostra vita quotidiana.
+Come di consueto, la Festa di Solidariet&agrave; offre uno spazio di riflessione sui temi legati alla societ&agrave; attuale. In questa <strong>undicesima edizione</strong> si ripercorrer&agrave; il cammino svolto in questi anni dal punto di vista delle tematiche trattate e degli aiuti concreti realizzati grazie ai numerosi partecipanti. <br>
+Inoltre si avr&agrave; modo di approfondire il ruolo dell'alimentazione nel mondo e nella nostra vita quotidiana, per tutta la durata dell'evento e in particolare durante la serata di Gioved&igrave; 21 Maggio dal tema "<strong>¿Only... You can eat? Puoi solo mangiare? - Il cibo come occasione di riscatto sociale</strong>".
 			</p>
 		</div>
 	</div>
 	<div class="col-md-4">
-		<div class="fb-page" data-href="https://www.facebook.com/festasolidarieta" data-width="350" data-height="650" data-hide-cover="true" data-show-facepile="false" data-show-posts="true"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/festasolidarieta"><a href="https://www.facebook.com/festasolidarieta">Festa di Solidarietà</a></blockquote></div></div>
+		<div class="fb-page" data-href="https://www.facebook.com/festasolidarieta" data-width="350" data-height="650" data-hide-cover="true" data-show-facepile="false" data-show-posts="true"><div class="fb-xfbml-parse-ignore"></div></div>
+	</div>
 	</div>
 </div>
 
 <section class="container-full text-center top-space">
 	<div id="map"></div>
 </section>
-
 {%endblock%}
