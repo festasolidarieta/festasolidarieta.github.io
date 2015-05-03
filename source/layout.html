@@ -1,7 +1,7 @@
-{% set navigation = [('/', 'Home'),
-                     ('programma.html', 'Cosa facciamo'),
-                     ('menu.html', 'La cucina propone...'), 
-                     ('dovesiamo.html', 'Come raggiungerci')] -%}
+{% set navigation = [('/', 'Home', 'fa-home'),
+                     ('programma.html', 'Cosa facciamo', 'fa-calendar'),
+                     ('menu.html', 'Cucina', 'fa-cutlery'), 
+                     ('dovesiamo.html', 'Dove siamo', 'fa-map-marker')] -%}
 <!DOCTYPE html>
 <html lang="it">
 <head>
@@ -46,7 +46,7 @@
 			<div class="navbar-collapse collapse">
 				<ul class="nav navbar-nav pull-right">
 					{%for element in navigation %}
-					<li {%if file == element[0] %} class="active" {%endif%}><a href="{{element[0]}}">{{element[1]}}</a></li>
+					<li {%if file == element[0] %} class="active" {%endif%}><a href="{{element[0]}}"><i class="fa {{element[2]}}"></i>&nbsp;&nbsp;{{element[1]}}</a></li>
 					{%endfor%}
 				</ul>
 			</div><!--/.nav-collapse -->
