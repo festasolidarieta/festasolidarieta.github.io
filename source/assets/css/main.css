@@ -263,3 +263,12 @@ img.pull-left { margin-right: 10px; }
 	width: 390px;
 	margin-bottom: 1em;
 }
+
+.fb_iframe_widget {
+	display: block !important;
+}
+
+.fb_iframe_widget span {
+	display: block !important;
+	margin: 0 auto !important;
+}
