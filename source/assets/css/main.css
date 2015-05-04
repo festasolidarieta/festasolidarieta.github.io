@@ -264,6 +264,10 @@ img.pull-left { margin-right: 10px; }
 	margin-bottom: 1em;
 }
 
+.fb-page {
+	margin-top: 30px;
+}
+
 .fb_iframe_widget {
 	display: block !important;
 }
