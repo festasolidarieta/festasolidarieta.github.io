@@ -61,7 +61,7 @@ if (typeof(FinishMessage)=="undefined")
 if (typeof(CountStepper)!="number")
   CountStepper = -1;
 if (typeof(LeadingZero)=="undefined")
-  LeadingZero = true;
+  LeadingZero = false;
 
 
 CountStepper = Math.ceil(CountStepper);
