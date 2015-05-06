@@ -212,7 +212,7 @@ img.pull-left { margin-right: 10px; }
 	.footer1 .entry-meta { border-top: 1px solid #ccc; border-bottom: 1px solid #ccc; margin: 0 0 35px 0; padding: 2px 0; color: #888888; font-size: 12px; font-size: 0.75rem; }
 		.footer1 .entry-meta a { color: #333333; }
 		.footer1 .entry-meta .meta-in { border-top: 1px solid #ccc; border-bottom: 1px solid #ccc; padding: 10px 0; }
-	.follow-me-icons { font-size:30px; margin-top: 20px; }		
+	.follow-me-icons { font-size:30px; margin-top: 20px; margin-bottom: 20px; }		
 		.follow-me-icons i { margin:0 15px 0 0; }
 		.follow-me-icons .last {margin: 0;}		
 
