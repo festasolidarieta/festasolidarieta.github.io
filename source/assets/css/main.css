@@ -261,7 +261,8 @@ img.pull-left { margin-right: 10px; }
 
 .img-sidebar {
 	width: 390px;
-	margin-bottom: 1em;
+    margin: 0.5em auto;
+    display: block;
 }
 
 .fb-page {
