@@ -1,8 +1,12 @@
-google.maps.event.addDomListener(window, 'load', init);
+function loadGoogleMaps() {
+	var script = document.createElement('script');
+	script.type = 'text/javascript';
+	script.src = 'https://maps.googleapis.com/maps/api/js?v=3.exp' +
+		'&signed_in=false&callback=initializeGoogleMaps';
+	document.body.appendChild(script);
+}
 
-var map;
-
-function init() {
+function initializeGoogleMaps() {
 	var mapOptions = {
 		center: new google.maps.LatLng(45.556509,9.259384,16),
 		zoom: 16,

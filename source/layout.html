@@ -34,7 +34,17 @@
 	{%block prenav%}{%endblock%}
 
 	<!-- Fixed navbar -->
-	<div class="navbar navbar-inverse navbar-fixed-top headroom" >
+	<div class="navbar navbar-inverse navbar-fixed-top headroom	" >
+		<div class="container navbar-default">
+			<div id="cookieBanner" style="display:none;">
+	            <p class="navbar-text">
+	            Questo sito fa uso di cookie per le statistiche e per migliorare l'integrazione
+	            con altri servizi. Il sito consente anche l'invio di cookie di terze parti.
+	            Proseguendo la navigazione (anche compiendo un'azione di scorrimento), si presta consenso all'utilizzo dei cookie.
+	            <a class="noconsent" href="cookies.html">Ulteriori dettagli</a> &mdash;
+	            <b><a class="allowConsent" href="#">Accetto</a></b></p>
+            </div>
+		</div>
 		<div class="container">
 			<div class="navbar-header">
 				<!-- Button for smallest screens -->
@@ -74,11 +84,9 @@
 			
 			<!-- Sidebar -->
 			<aside class="col-md-4 sidebar sidebar-right">
-
 				<div class="widget">
 					{%block sidebar%}{%endblock%}
 				</div>
-
 			</aside>
 			<!-- /Sidebar -->
 
@@ -126,13 +134,16 @@
 		<div class="footer2">
 			<div class="container">
 				<div class="row">
-					<div class="col-md-6 widget">
+					<div class="col-md-8 widget">
 						<div class="widget-body">
 								Copyright &copy; 2015, Festa di Solidariet&agrave;.
-								Layout based on the <a href="https://github.com/pozh/Progressus/" rel="designer">progressus</a> template. 
+								Layout basato sul template <a href="https://github.com/pozh/Progressus/" rel="designer">progressus</a>.
 						</div>
 					</div>
-					<div class="col-md-6 widget">
+					<div class="col-md-4 widget">
+						<div class="widget-body text-right">
+							<b><a class="noconsent" href="cookies.html">Informativa sui cookie</a></b>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -140,23 +151,13 @@
 
 	</footer>
 
-	
-	<script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-    ga('create', 'UA-62281540-1', 'auto');
-    ga('send', 'pageview');
-  	</script>
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-	<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/cookieconsent.js"></script>
+	<script src="assets/js/bootstrap.min.js"></script>
 	<script src="assets/js/headroom.min.js"></script>
 	<script src="assets/js/jQuery.headroom.min.js"></script>
 	<script src="assets/js/template.js"></script>
 
-	<script src="//maps.googleapis.com/maps/api/js?key=&amp;sensor=false&amp;extension=.js"></script> 
 	<script src="assets/js/google-map.js"></script>
 	{%block endscript%}{%endblock%}
 </body>
