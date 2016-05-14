@@ -1,164 +1,166 @@
 {% set navigation = [('/', 'Home', 'fa-home'),
                      ('programma.html', 'Programma', 'fa-calendar'),
                      ('progetti.html', 'Progetti', 'fa-users'),
-                     ('menu.html', 'Cucina', 'fa-cutlery'), 
+                     ('menu.html', 'Cucina', 'fa-cutlery'),
                      ('dovesiamo.html', 'Dove siamo', 'fa-map-marker')] -%}
 <!DOCTYPE html>
 <html lang="it">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport"    content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="Festa di Solidariet&agrave;">
+    <meta charset="utf-8">
+    <meta name="viewport"    content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Festa di Solidariet&agrave;">
 
-	<title>{%block title%}Festa di Solidariet&agrave;{%endblock%}</title>
+    <title>{%block title%}Festa di Solidariet&agrave;{%endblock%}</title>
 
-	<link rel="shortcut icon" href="assets/images/gt_favicon.png">
-	
-	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
-	<link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <link rel="shortcut icon" href="assets/images/gt_favicon.png">
 
-	<!-- Custom styles for our template -->
-	<link rel="stylesheet" href="assets/css/bootstrap-theme.css" media="screen" >
-	<link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
 
-	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-	<!--[if lt IE 9]>
-	<script src="assets/js/html5shiv.js"></script>
-	<script src="assets/js/respond.min.js"></script>
-	<![endif]-->
-	{%block head%}{%endblock%}
+    <!-- Custom styles for our template -->
+    <link rel="stylesheet" href="assets/css/bootstrap-theme.css" media="screen" >
+    <link rel="stylesheet" href="assets/css/main.css">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+    {%block head%}{%endblock%}
 </head>
 
 <body class="home">
 
-	{%block prenav%}{%endblock%}
+    {%block prenav%}{%endblock%}
 
-	<!-- Fixed navbar -->
-	<div class="navbar navbar-inverse navbar-fixed-top headroom	" >
-		<div class="container navbar-default">
-			<div id="cookieBanner" style="display:none;">
-	            <p class="navbar-text">
-	            Questo sito fa uso di cookie per le statistiche e per migliorare l'integrazione
-	            con altri servizi. Il sito consente anche l'invio di cookie di terze parti.
-	            Proseguendo la navigazione (anche compiendo un'azione di scorrimento), si presta consenso all'utilizzo dei cookie.
-	            <a class="noconsent" href="cookies.html">Ulteriori dettagli</a> &mdash;
-	            <b><a class="allowConsent" href="#">Accetto</a></b></p>
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-inverse navbar-fixed-top headroom	" >
+        <div class="container navbar-default">
+            <div id="cookieBanner" style="display:none;">
+                <p class="navbar-text">
+                Questo sito fa uso di cookie per le statistiche e per migliorare l'integrazione
+                con altri servizi. Il sito consente anche l'invio di cookie di terze parti.
+                Proseguendo la navigazione (anche compiendo un'azione di scorrimento), si presta consenso all'utilizzo dei cookie.
+                <a class="noconsent" href="cookies.html">Ulteriori dettagli</a> &mdash;
+                <b><a class="allowConsent" href="#">Accetto</a></b></p>
             </div>
-		</div>
-		<div class="container">
-			<div class="navbar-header">
-				<!-- Button for smallest screens -->
-				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-				<a class="navbar-brand " href="/">
-					<img src="assets/images/logo.png" alt="Festa di Solidariet&agrave;">
-					<span>festa di solidariet&agrave;</span>
-				</a>
-			</div>
-			<div class="navbar-collapse collapse">
-				<ul class="nav navbar-nav pull-right">
-					{%for element in navigation %}
-					<li {%if file == element[0] %} class="active" {%endif%}><a href="{{element[0]}}"><i class="fa {{element[2]}}"></i>&nbsp;&nbsp;{{element[1]}}</a></li>
-					{%endfor%}
-				</ul>
-			</div><!--/.nav-collapse -->
-		</div>
-	</div> 
-	<!-- /.navbar -->
+        </div>
+        <div class="container">
+            <div class="navbar-header">
+                <!-- Button for smallest screens -->
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+                <a class="navbar-brand " href="/">
+                    <img src="assets/images/logo.png" alt="Festa di Solidariet&agrave;">
+                    <span>festa di solidariet&agrave;</span>
+                </a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav pull-right">
+                    {%for element in navigation %}
+                    <li {%if file == element[0] %} class="active" {%endif%}><a href="{{element[0]}}"><i class="fa {{element[2]}}"></i>&nbsp;&nbsp;{{element[1]}}</a></li>
+                    {%endfor%}
+                </ul>
+            </div><!--/.nav-collapse -->
+        </div>
+    </div> 
+    <!-- /.navbar -->
 
-	{%block header%}
-	<header id="head" class="secondary"></header>
-	{%endblock%}
+    {%block header%}
+    <header id="head" class="secondary"></header>
+    {%endblock%}
 
-	{%block mainbody%}
-	<div class="container bottom-space">
-		<div class="row">
-			<!-- Article main content -->
-			<article class="col-md-8 maincontent">
-				<header class="page-header">
-					<h1 class="page-title">{%block pagetitle%}{%endblock%}</h1>
-				</header>
-				
-				{%block content%}{%endblock%}
-			</article>
-			<!-- /Article -->
-			
-			<!-- Sidebar -->
-			<aside class="col-md-4 sidebar sidebar-right">
-				<div class="widget">
-					{%block sidebar%}{%endblock%}
-				</div>
-			</aside>
-			<!-- /Sidebar -->
+    {%block mainbody%}
+    <div class="container bottom-space">
+        <div class="row">
+            <!-- Article main content -->
+            <article class="col-md-8 maincontent">
+                <header class="page-header">
+                    <h1 class="page-title">{%block pagetitle%}{%endblock%}</h1>
+                </header>
+                {%block content%}{%endblock%}
+            </article>
+            <!-- /Article -->
 
-		</div>
-	</div>	<!-- /container -->
+            <!-- Sidebar -->
+            <aside class="col-md-4 sidebar sidebar-right">
+                <div class="widget">
+                    {%block sidebar%}{%endblock%}
+                </div>
+            </aside>
+            <!-- /Sidebar -->
 
-	{%endblock%}
+        </div>
+    </div>	<!-- /container -->
 
-	<footer id="footer">
-		<div class="footer1">
-			<div class="container">
-				<div class="row">
-					<div class="col-sm-4 widget">
-						<h3 class="widget-title">Contatti</h3>
-						<p class="widget-body">
-						<ul style="list-style-type: none;padding: 0">
-							<li><i class="fa fa-phone"></i>&nbsp;&nbsp;+39 377 2594264</li>
-							<li><i class="fa fa-envelope"></i>&nbsp;&nbsp;<a href="mailto:info@festasolidarieta.it">info@festasolidarieta.it</a></li>
-						</ul>
-						</p>
-						<div class="follow-me-icons">
-								<a href="https://www.facebook.com/festasolidarieta"><i class="fa fa-facebook-square fa-2"></i></a>
-								<a href="https://plus.google.com/+FestaSolidarietaItMonza/"><i class="fa fa-google-plus fa-2 last"></i></a>
-						</div>
+    {%endblock%}
+
+    <footer id="footer">
+        <div class="footer1">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-4 widget">
+                        <h3 class="widget-title">Contatti</h3>
+                        <p class="widget-body">
+                        <ul style="list-style-type: none;padding: 0">
+                            <li><i class="fa fa-phone"></i>&nbsp;&nbsp;+39 377 2594264</li>
+                            <li><i class="fa fa-envelope"></i>&nbsp;&nbsp;<a href="mailto:info@festasolidarieta.it">info@festasolidarieta.it</a></li>
+                        </ul>
+                        </p>
+                        <div class="follow-me-icons">
+                            <a href="https://www.facebook.com/festasolidarieta"><i class="fa fa-facebook-square fa-2"></i></a>
+                            <a href="https://plus.google.com/+FestaSolidarietaItMonza/"><i class="fa fa-google-plus fa-2 last"></i></a>
+                        </div>
                         <!-- <p><strong>Con il patrocinio del Comune di Monza</strong></p> -->
-					</div>
+                    </div>
 
-					<div class="col-sm-8 widget text-right">
-						<h3 class="widget-title">Evento realizzato con la collaborazione di</h3>
-							<p class="widget-body">
-							<ul style="list-style-type: none;padding: 0">
-								<li> <a href="http://www.parrocchieinsieme.org">Oratori Sant'Alessandro, San Rocco, Regina Pacis, SS. Giacomo e Donato</a></li>
-								<li><a href="http://www.sguardionlus.it">Associazione SGUARDI Onlus</a></li>
-								<li><a href="http://www.asosanrocco.it">ASO San Rocco</a></li>
-								<li><a href="http://www.astroskating.it">Astro Roller Skating</a></li>
-								<li>C.G. La Bussola</li>
-                                <li>Caritas Comunit&agrave; pastorale <a href="http://sanvincenzomonza.it">San Vincenzo</a></li>
-								<li><a href="http://www.operazionematogrosso.it">Operazione Mato Grosso</a></li>
-							</p>
-					</div>
-				</div> <!-- /row of widgets -->
-			</div>
-		</div>
+                    <div class="col-sm-8 widget text-right">
+                        <h3 class="widget-title">Evento realizzato con la collaborazione di</h3>
+                            <p class="widget-body">
+                            <ul style="list-style-type: none;padding: 0">
+                                <li> <a href="http://www.parrocchieinsieme.org">Oratori Sant'Alessandro, San Rocco, Regina Pacis, SS. Giacomo e Donato</a></li>
+                                <li><a href="http://www.sguardionlus.it">Associazione SGUARDI Onlus</a></li>
+                                <li><a href="http://www.asosanrocco.it">ASO San Rocco</a></li>
+                                <li><a href="http://www.astroskating.it">Astro Roller Skating</a></li>
+                                <li>C.G. La Bussola</li>
+                                <li><a href="http://fraternita-capitanio.it">Fraternit&agrave; Capitanio</a></li>
+                                <li><a href="http://www.gsoreginapacis.it">GSO Regina Pacis</a></li>
+                                <li><a href="http://www.macellopark.com">Macello Park</a></li>
+                                <li><a href="http://www.operazionematogrosso.it">Operazione Mato Grosso</a></li>
+                                <li><a href="http://www.studiogayatri.it">Studio Gayatri</a></li>
+                            </p>
+                    </div>
+                </div> <!-- /row of widgets -->
+            </div>
+        </div>
 
-		<div class="footer2">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-8 widget">
-						<div class="widget-body">
-								Copyright &copy; 2016, Festa di Solidariet&agrave;.
-								Layout basato sul template <a href="https://github.com/pozh/Progressus/" rel="designer">progressus</a>.
-						</div>
-					</div>
-					<div class="col-md-4 widget">
-						<div class="widget-body text-right">
-							<b><a class="noconsent" href="cookies.html">Informativa sui cookie</a></b>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
+        <div class="footer2">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 widget">
+                        <div class="widget-body">
+                            Copyright &copy; 2016, Festa di Solidariet&agrave;.
+                            Layout basato sul template <a href="https://github.com/pozh/Progressus/" rel="designer">progressus</a>.
+                        </div>
+                    </div>
+                    <div class="col-md-4 widget">
+                        <div class="widget-body text-right">
+                            <b><a class="noconsent" href="cookies.html">Informativa sui cookie</a></b>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-	</footer>
+    </footer>
 
-	<script src="assets/js/jquery.min.js"></script>
-	<script src="assets/js/cookieconsent.js"></script>
-	<script src="assets/js/bootstrap.min.js"></script>
-	<script src="assets/js/headroom.min.js"></script>
-	<script src="assets/js/jQuery.headroom.min.js"></script>
-	<script src="assets/js/template.js"></script>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/cookieconsent.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/headroom.min.js"></script>
+    <script src="assets/js/jQuery.headroom.min.js"></script>
+    <script src="assets/js/template.js"></script>
 
-	<script src="assets/js/google-map.js"></script>
-	{%block endscript%}{%endblock%}
+    <script src="assets/js/google-map.js"></script>
+    {%block endscript%}{%endblock%}
 </body>
 </html>

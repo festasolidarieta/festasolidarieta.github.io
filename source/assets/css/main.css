@@ -23,7 +23,7 @@ body {
 }
 
 #head.secondary {
-	background:#181015 url( ../images/carousel_3.jpg) no-repeat;
+	background:#181015 url( ../images/carousel_1.jpg) no-repeat;
     background-size: cover;
     -moz-background-size: cover;
 	height:100px;
@@ -144,6 +144,16 @@ body {
 	}
 	.carousel .four {
 	    background: url(../images/carousel_4.jpg) no-repeat;
+	    background-size: cover;
+	    -moz-background-size: cover;
+	}
+	.carousel .five {
+	    background: url(../images/carousel_5.jpg) no-repeat;
+	    background-size: cover;
+	    -moz-background-size: cover;
+	}
+	.carousel .six {
+	    background: url(../images/carousel_6.jpg) no-repeat;
 	    background-size: cover;
 	    -moz-background-size: cover;
 	}
