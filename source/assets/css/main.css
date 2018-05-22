@@ -158,6 +158,18 @@ body {
 	    -moz-background-size: cover;
 	}
 
+	.carousel .seven {
+	    background: url(../images/carousel_7.jpg) no-repeat;
+	    background-size: cover;
+	    -moz-background-size: cover;
+	}
+
+	.carousel .eight {
+	    background: url(../images/carousel_8.jpg) no-repeat;
+	    background-size: cover;
+	    -moz-background-size: cover;
+	}
+
 	#head .jumbotron {
 		position: relative;
 		z-index: 2;
