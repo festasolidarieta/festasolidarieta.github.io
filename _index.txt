@@ -1,0 +1,6 @@
+http://0.0.0.0:8080/cookies.html
+http://0.0.0.0:8080/dovesiamo.html
+http://0.0.0.0:8080/index.html
+http://0.0.0.0:8080/menu.html
+http://0.0.0.0:8080/progetti.html
+http://0.0.0.0:8080/programma.html
